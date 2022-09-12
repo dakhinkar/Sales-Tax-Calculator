@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Tax Calcultor</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section class="calculator">
+        <h2 class="heading">Sales Tax calculator</h2>
+        <ul class="item-details" id="list-1">
+        </ul>
+        <div class="calculator-action">
+            <button class="btn-btn" type="reset" onclick="clearItems()">Clear All</button>
+            <button class="btn-btn" type="submit" onclick="calculateTotal()">Calculate Tax </button>
+        </div>
+
+    </section>
+    <section class="input-field">
+        <h3 class="subheading">Add Details</h3>
+        <form name="inputf" onsubmit="formSubmitHandler()">
+            <div class="item-name left">
+                <label for="name">Item Name: </label>
+                <input type="text" name="fname" id="fname" minlength="2" required>
+            </div>
+            <div class="item-price left">
+                <label for="price">Price per Item:</label>
+                <input type="number" name="price" id="price" inputmode="numeric" required>
+            </div>
+            <div class="item-quantity left">
+                <label for="quantity">Quantity: </label>
+                <input type="number" name="quantity" id="quantity" min="1" required>
+            </div>
+            <div class="item-quantity left">
+                <label for="type"> Book/Food/Medical: </label>
+                <input type="checkbox" name="type" id="type">
+            </div>
+            <div class="item-action left">
+                <button class="btn-btn" type="reset" onclick="formClearHandler()">Clear</button>
+                <button class="btn-btn" onclick="formSubmitHandler(event)">Add Item</button>
+            </div>
+        </form>
+    </section>
+    
+</body>
+<script src="index.js"></script>
+</html>
